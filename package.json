@@ -1,0 +1,25 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "description": "very simple file logger for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limi58/logger.git"
+  },
+  "dependencies": {
+    "left-pad": "^1.1.1"
+  },
+  "keywords": [
+    "logger"
+  ],
+  "author": "limi58",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/limi58/logger/issues"
+  },
+  "homepage": "https://github.com/limi58/logger#readme"
+}
