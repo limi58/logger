@@ -1,26 +1,24 @@
 # logger
 very simple file logger for nodejs
 
+# install
+`npm install --save simple-file-logger`
+
 # Usage
 ```js
-const logger = require('./logger')
+const logger = require('simple-file-logger')
 const log = logger({
-  filename: path.join(__dirname, 'logs', 'log') // define where log should be saved  
+  path: './logs', // define dir where log should be saved  
+  filename: 'log', // define filename exclude extension, default 'log'
 })
-log('here have a error')
+log('here have a error', function(err) {...})
 ```
 
-path `./logs` will have a file name such as `log2016-09-09.log`.
+path `./logs` will have a file like `log2016-09-09.log`.
 
 content will be like this:
 
 ```js
 [ 2016-09-14 23:19:12 ]
-TypeError: Cannot read property 'foo' of undefined
-    at parse (D:\web\imbgf\lib\format_date.js:16:20)
-    at dateFormater (D:\web\imbgf\lib\format_date.js:12:10)
-
-[ 2016-09-14 23:21:45 ]
-TypeError: Cannot read property 'bar' of undefined
-    at parse (D:\web\imbgf\lib\format_date.js:16:20)
+here have a error
 ```
