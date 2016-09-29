@@ -8,6 +8,7 @@ function logger(config = {}) {
   const filename = config.filename || 'log'
   const date = dateFormat('', 'date')
   return (msg, cb) => {
+    if (!cb) cb = () => {}
     fs.access(_path, err => {
       if (err) {
         cb(err)
