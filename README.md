@@ -6,7 +6,7 @@ very simple file logger for nodejs
 
 # Usage
 ```js
-const logger = require('simple-file-logger')
+const logger = require('m-logger')
 const log = logger({
   path: './logs', // define dir where log should be saved  
   filename: 'log', // define filename exclude extension, default 'log'

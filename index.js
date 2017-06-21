@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const dateFormat = require('simple-date-formater')
+const dateFormat = require('m-dater')
 
 function logger(config = {}) {
   verifyConfig(config)

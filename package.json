@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "left-pad": "^1.1.1",
-    "simple-date-formater": "^1.1.0"
+    "m-dater": "^1.0.0"
   },
   "keywords": [
     "logger"
