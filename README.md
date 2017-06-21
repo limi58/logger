@@ -2,7 +2,7 @@
 very simple file logger for nodejs
 
 # install
-`npm install --save simple-file-logger`
+`npm install --save m-logger`
 
 # Usage
 ```js
