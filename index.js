@@ -25,7 +25,7 @@ function logger(config = {}) {
             cb(err)
             return
           }
-          fs.close(fd)
+          fs.close(fd, e => e)
           cb()
         })
       })

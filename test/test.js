@@ -29,5 +29,6 @@ describe('test logger', function () {
   it('no cb should work', function(done) {
     const log = logger({ path: './logs' })
     log('hi')
+    done()
   })
 })
