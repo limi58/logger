@@ -1,12 +1,12 @@
 const fs = require('fs')
 const path = require('path')
-const dateFormat = require('m-dater')
 
 function logger(config = {}) {
   verifyConfig(config)
   const _path = config.path
   const filename = config.filename || 'log'
-  const date = dateFormat('', 'date')
+  const current = new Date()
+  const currentDate = current.toLocaleDateString().replace(/\//g, '-')
   return (msg, cb) => {
     if (!cb) cb = () => {}
     fs.access(_path, err => {
@@ -14,13 +14,13 @@ function logger(config = {}) {
         cb(err)
         return
       }
-      const file = path.join(_path, `${filename}${dateFormat('', 'date')}.log`)
+      const file = path.join(_path, `${filename}${currentDate}.log`)
       fs.open(file, 'a', (err, fd) => {
         if (err) {
           cb(err)
           return
         }
-        fs.write(fd, getLoggerMsg(msg), (err, written, string) => {
+        fs.write(fd, getLoggerMsg(msg, current), (err, written, string) => {
           if (err) {
             cb(err)
             return
@@ -33,8 +33,8 @@ function logger(config = {}) {
   }
 }
 
-function getLoggerMsg(msg) {
-  return `[ ${dateFormat()} ]\n${msg}\n\n`
+function getLoggerMsg(msg, current) {
+  return `[ ${current.toLocaleString()} ]\n${msg}\n\n`
 }
 
 function verifyConfig(config) {

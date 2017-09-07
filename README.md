@@ -14,11 +14,11 @@ const log = logger({
 log('here have a error', function(err) {...})
 ```
 
-path `./logs` will have a file like `log2016-09-09.log`.
+path `./logs` will have a file like `log2016-9-9.log`.
 
 content will be like this:
 
 ```js
-[ 2016-09-14 23:19:12 ]
+[ 2016-9-14 23:19:12 ]
 here have a error
 ```

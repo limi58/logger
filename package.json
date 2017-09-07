@@ -10,10 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/limi58/logger.git"
   },
-  "dependencies": {
-    "left-pad": "^1.1.1",
-    "m-dater": "^1.0.0"
-  },
+  "dependencies": {},
   "keywords": [
     "logger"
   ],
