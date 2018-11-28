@@ -5,9 +5,9 @@ function logger(config = {}) {
   verifyConfig(config)
   const _path = config.path
   const filename = config.filename || 'log'
-  const current = new Date()
-  const currentDate = current.toLocaleDateString().replace(/\//g, '-')
   return (msg, cb) => {
+    const current = new Date()
+    const currentDate = current.toLocaleDateString().replace(/\//g, '-')
     if (!cb) cb = () => {}
     fs.access(_path, err => {
       if (err) {
